@@ -24,7 +24,7 @@ const BIZ_TYPE_ENUM = new Enum(['supply=4', 'setUp', 'undo']); // return {SUPPLY
 * new Enum(String[, String, ...]);
 ```
 new Enum('name'); // return {NAME: 1}
-new Enum('name=冯尚实', 'age', 'tail = 178'); // {NAME: "冯尚实", AGE: 1, TAIL: 178}
+new Enum('name=冯尚实', 'age', 'tail = 178'); // {NAME: "冯尚实", AGE: 1, TAIL: 178}
 ```
 
 ### 数组

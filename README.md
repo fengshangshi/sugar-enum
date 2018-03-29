@@ -46,3 +46,31 @@ Uncaught Error: 参数类型异常
     at <anonymous>:1:1 
 */
 ```
+
+### 对象
+```
+// 单个对象
+new Enum({
+  name: 'shangshi.feng',
+  age: '20',
+  tail: '178',
+}); // {NAME: "shangshi.feng", AGE: 20, TAIL: 178}
+
+// 两个及以上对象
+const a = {
+  name: 'shangshi.feng',
+  age: '20',
+  tail: '178',
+};
+const b = {
+  name: 'sugar.feng',
+  age: '6',
+  tail: '125',
+}
+new Enum(a, b);
+/** 
+Uncaught Error: 参数类型异常
+    at new Enum (enum.js?31d3:76)
+    at <anonymous>:1:1 
+*/
+```

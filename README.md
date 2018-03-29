@@ -5,18 +5,18 @@
 ```
 import Enum from 'sugar-enum';
 
-const BIZ_TYPE_ENUM = new Enum({
+const types = new Enum({
   supply: 1,
   setUp: 2,
   undo: 3,
-});
-// return {SUPPLY: 1, SETUP: 2, UNDO: 3}
+}); // return {SUPPLY: 1, SETUP: 2, UNDO: 3}
 ```
 
-如果是值为1，2，3或者只指定初始成员的初始值如下使用：
 ```
-const BIZ_TYPE_ENUM = new Enum(['supply=4', 'setUp', 'undo']); // return {SUPPLY: 1, SETUP: 2, UNDO: 3}
-const BIZ_TYPE_ENUM = new Enum(['supply=4', 'setUp', 'undo']); // return {SUPPLY: 4, SETUP: 5, UNDO: 6}
+// 如果是值为1，2，3
+new Enum(['supply', 'setUp', 'undo']); // {SUPPLY: 1, SETUP: 2, UNDO: 3}
+// 指定初始成员的值
+new Enum(['supply=4', 'setUp', 'undo']); // {SUPPLY: 4, SETUP: 5, UNDO: 6}
 ```
 
 ## 参数

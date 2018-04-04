@@ -1,15 +1,23 @@
 {
   "name": "sugar-enum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "fengshangshi",
   "license": "ISC",
   "dependencies": {
-    "sugar-type": "0.0.5"
-  }
+    "sugar-type": "0.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengshangshi/sugar-enum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fengshangshi/sugar-enum/issues"
+  },
+  "homepage": "https://github.com/fengshangshi/sugar-enum#readme"
 }

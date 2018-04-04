@@ -74,3 +74,7 @@ Uncaught Error: 参数类型异常
     at <anonymous>:1:1 
 */
 ```
+
+
+## 更新记录
+(0.0.2)20180404：增加对symbol类型值得支持

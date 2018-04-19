@@ -1,7 +1,7 @@
 # sugar-enum
-枚举类型类库
+枚举
 
-## 简单应用
+## 如何使用
 ```js
 import Enum from 'sugar-enum';
 
@@ -9,15 +9,12 @@ const types = new Enum({
   supply: 1,
   setUp: 2,
   undo: 3,
-}); // return {SUPPLY: 1, SETUP: 2, UNDO: 3}
+}); 
+console.log(types.enums) // {SUPPLY: 1, SETUP: 2, UNDO: 3, 1: "supply", 2: "setUp", 3: "undo"}
+
+console.log(types.SUPPLY) // also OK, return 1
 ```
 
-```js
-// 如果是值为1，2，3
-new Enum(['supply', 'setUp', 'undo']); // {SUPPLY: 1, SETUP: 2, UNDO: 3}
-// 指定初始成员的值
-new Enum(['supply=4', 'setUp', 'undo']); // {SUPPLY: 4, SETUP: 5, UNDO: 6}
-```
 
 ## 参数
 ### 字符串
@@ -75,6 +72,39 @@ Uncaught Error: 参数类型异常
 */
 ```
 
+## 属性
+### enums
++ value反转为key的枚举成员不可被遍历
+```js
+const types = new Enum({
+  supply: 1,
+  setUp: 2,
+  undo: 3,
+}); 
+
+console.log(types.enums)
+// {SUPPLY: 1, SETUP: 2, UNDO: 3, 1: "supply", 2: "setUp", 3: "undo"}
+// 其中成员{1: "supply", 2: "setUp", 3: "undo"}的enumerable为false，不可被遍历
+```
+
+
+## 方法
+### contains()
+```js
+const types = new Enum({
+  supply: 1,
+  setUp: 2,
+  undo: 3,
+}); 
+
+types.contains(types.SUPPLY); // true
+types.contains([types.SUPPLY, types.SETUP]); // true
+types.contains('A'); // false
+```
+
+
+
 
 ## 更新记录
-(0.0.2)20180404：增加对symbol类型值得支持
++ (0.1.0)20180419：支持contains方法，以及enums属性
++ (0.0.2)20180404：增加对symbol类型值得支持
